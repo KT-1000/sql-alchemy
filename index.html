@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.12: http://docutils.sourceforge.net/" />
+<title>Homework: SQLAlchemy Practice</title>
+<link rel="stylesheet" href="http://fellowship.hackbrightacademy.com/tools/homework.css" type="text/css" />
+</head>
+<body>
+<div class="document" id="homework-sqlalchemy-practice">
+<h1 class="title">Homework: SQLAlchemy Practice</h1>
+
+<div class="section" id="introduction">
+<h1>Introduction</h1>
+<p>We've created a file <cite>model.py</cite> that, when run, creates a database
+of Hackbright employees. The focus of today's homework is to get some
+practice querying a database using SQLAlchemy to get information that
+you want. If you need help, take a look at the SQLAlchemy I &amp; II lectures.</p>
+</div>
+<div class="section" id="requirements">
+<h1>Requirements</h1>
+<p>Before you get started querying, make sure to do the following:</p>
+<ul class="simple">
+<li>Make and run a virtual environment in your working directory.</li>
+<li>Install the requirements via the <cite>requirements.txt</cite> file.</li>
+<li>Run <tt class="docutils literal">createdb emp</tt> in your terminal. (If you get an error, make sure Postgres is running on your computer.)</li>
+<li>Create and populate the database using <tt class="docutils literal">python <span class="pre">-i</span> model.py</tt>.</li>
+<li>If you run <cite>model.py</cite> again, it will try to seed the database a second time. PostgreSQL doesn't like this and will throw an error. To avoid this, exit interactive mode, and before running <cite>model.py</cite> a second time, comment out line 210 (<tt class="docutils literal">example_data()</tt>).</li>
+</ul>
+</div>
+<div class="section" id="directions">
+<h1>Directions</h1>
+<p>Now that your database is established, here are the queries that we'd
+like you to run:</p>
+<ul class="simple">
+<li>First, while running <tt class="docutils literal">python <span class="pre">-i</span> model.py</tt>, try using the included functions (<tt class="docutils literal">all_employees_nav()</tt> and <tt class="docutils literal">all_employees_join()</tt>) to get a list of all employees.</li>
+<li>Next, run <cite>server.py</cite>, navigate to <cite>http://localhost:5000</cite>, and check out these functions as routes -- use the Debug Toolbar on the right to note the difference between running times and query numbers for the two functions. Why are they different? What does that mean?</li>
+<li>Run <tt class="docutils literal">python <span class="pre">-i</span> model.py</tt> again, and grab the employee object with the name 'Cynthia Dueltgen.' (Hint: later steps will be easier if you bind the result of this query to a variable name.)</li>
+<li>What department is she in? (Show the object for her department.)</li>
+<li>What is the phone number of the department that Cynthia is in?</li>
+<li>Find all employees whose department we don't know. (Hint: they will have <cite>NULL</cite> department codes.)</li>
+<li>Get a list of tuples with just the name of everyone whose favorite color is orange.</li>
+<li>Find all employees who work in 'Administration.'</li>
+</ul>
+<p>P.S. All files and materials can be downloaded from the fellowship website.</p>
+<p><strong>EXTRA CREDIT:</strong> Read this for some tips on improving SQLAlchemy performance
+<a class="reference external" href="https://pythonguy.wordpress.com/2011/08/17/sqlalchemy-tips-performance/">https://pythonguy.wordpress.com/2011/08/17/sqlalchemy-tips-performance/</a> .</p>
+</div>
+</div>
+</body>
+</html>
